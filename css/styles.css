@@ -1,0 +1,108 @@
+.wrapper {
+  padding-top: 82px;
+}
+
+nav {
+  text-align: center;
+  border-bottom: 2px solid #333;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+/*liに幅を設定*/
+nav li {
+  list-style: none;
+  display: inline-block;
+  width: 10%;
+  min-width: 90px;
+}
+/*li右側に線を引く（最後は除く）*/
+nav li:not(:last-child){
+  border-right: 2px solid #ddd;
+}
+/*テキストデコレーションをなくす文字を黒に*/
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* nav a.current {
+  color: #00B0F0;
+  border-bottom: 2px solid #00B0F0;
+} */
+/*マウスホバーで黄色に*/
+nav a:hover {
+  color: #F7CB4D;
+  border-bottom: 2px solid #F7CB4D; 
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 860px;
+}
+
+.logo {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.logo-title {
+  font-family: "Open sans", sans-serif;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: .2cm;
+}
+
+.logo-subtitle {
+  font-size: 20px;
+  margin-top: 5px;
+  text-align: center;
+  letter-spacing: .2cm;
+}
+/*css内の複数セレクタを指定する場合は,(カンマ)で区切る*/
+.heading-primary,.section-lead {
+  text-align: center;
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+figure {
+  margin: 0;
+}
+
+.star5_rating {
+  position:relative;
+  z-index: 0;
+  display:inline-block;
+  white-space: nowrap;
+  color: #CCCCCC;
+}
+
+.star5_rating:before,.star5_rating:after{
+  content:'★★★★★';
+}
+
+.star5_rating:after{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffcf32;
+}
+
+/* .star5_rating[date-rate="3"]:after{width: 60%;} */
+.star5_rating[data-rate="3"]:after{ width: 60%; }
+
+/* .star5_rating[date-rate="2"]:after{ width: 40%; } */
+.star5_rating[data-rate="2"]:after{ width: 40%; } 
